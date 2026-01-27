@@ -1,4 +1,4 @@
-using System.Threading;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +23,7 @@ public class MoveObjectWithForces : MonoBehaviour
         //rb.AddForce(forceToApply);
         // 2. Setting the velocity directly;
         //rb.velocity = velocity;
-        // 3. Translating with the rigid body (Will not ignore collision when moving)
-        //rb.MovePosition(movement * Time.deltaTime);
+        // 3. Translating with the rigid body (Will not ignore collision when moving) will also work with kinematic rigidbodies
+        rb.MovePosition(transform.position + movement * Time.deltaTime);
     }
 }
