@@ -36,7 +36,7 @@ public class RagdollToggle : MonoBehaviour
     void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("RagdollTrigger"))
         {
-            SetRagdoll(true);
+            //SetRagdoll(true);
         }
     }
     void Update()
