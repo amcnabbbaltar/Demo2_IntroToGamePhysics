@@ -27,10 +27,10 @@ public class CharacterMovement : MonoBehaviour
     void FixedUpdate()
     {   
         horizontal = Input.GetAxis("Horizontal");
-        rb.AddForce(Vector3.right * horizontal);
+        rb.AddForce(Vector3.right * horizontal * moveStrenght);
         if (triggerJump)
         {
-            rb.AddForce(Vector3.up * jumpStrength );
+            rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
             
             triggerJump=false;
         }
